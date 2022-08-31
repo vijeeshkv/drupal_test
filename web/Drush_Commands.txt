@@ -1,0 +1,2 @@
+For running drush commands, execute this command on project folder.
+alias drush='./vendor/bin/drush'
