@@ -24,10 +24,8 @@ web/.htaccess
 web/.ht.router.php
 web/autoload.php
 web/index.php
-web/sites/default/default.services.pantheon.preproduction.yml
 web/sites/default/default.services.yml
 web/sites/default/default.settings.php
-web/sites/default/settings.pantheon.php
 web/sites/development.services.yml
 web/sites/example.settings.local.php
 web/sites/example.sites.php
@@ -38,10 +36,8 @@ web/web.config
 web/sites/default/files
 
 # Place local settings in settings.local.php
-web/sites/*/settings.local.php
-web/sites/*/settings.ddev.php
+!web/sites/*/settings.local.php
 web/sites/*/services*.yml
-!web/sites/*/services.pantheon.*.yml
 !web/sites/*/services.yml
 
 # Packages #
