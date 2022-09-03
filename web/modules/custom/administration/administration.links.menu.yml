@@ -1,0 +1,5 @@
+administration.fullwidthpages:
+  title: 'Date Display Custom Settings'
+  route_name: administration.settings
+  parent: system.admin_config_services
+  menu_name: current-date-time-custom-setting

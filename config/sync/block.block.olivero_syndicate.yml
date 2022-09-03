@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - system
   theme:
     - olivero
 _core:
@@ -20,4 +21,8 @@ settings:
   label_display: '0'
   provider: node
   block_count: 10
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: node/1

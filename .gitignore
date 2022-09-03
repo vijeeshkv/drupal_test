@@ -105,3 +105,4 @@ web/sites/example.settings.local.php
 /.eslintrc.json
 /.gitattributes
 /.drush-lock-update
+web/sites/drupal-assigntest.dd/

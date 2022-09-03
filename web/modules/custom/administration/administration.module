@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * The administration module.
+ */
+
+
+use Drupal\Core\Url;
+use Drupal\user\UserInterface;
+use Drupal\Core\Cache\Cache;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function administration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the administration module.
+    case 'help.page.administration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Administration') . '</p>';
+      return $output;
+
+    default:
+  }
+}

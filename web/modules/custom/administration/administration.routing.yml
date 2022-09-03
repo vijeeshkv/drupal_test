@@ -1,0 +1,7 @@
+administration.settings:
+  path: '/admin/config/administration/settings'
+  defaults:
+    _form: '\Drupal\administration\Form\SettingsForm'
+    _title: 'Date Display Custom Settings'
+  requirements:
+    _permission: 'administer site configuration'
