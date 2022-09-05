@@ -1,5 +1,6 @@
 administration.fullwidthpages:
   title: 'Date Display Custom Settings'
   route_name: administration.settings
-  parent: system.admin_config_services
+  parent: system.admin_config_ui
   menu_name: current-date-time-custom-setting
+  weight: 10

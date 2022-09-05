@@ -1,0 +1,4 @@
+services:
+  customdatedisplay:
+    class: Drupal\administration\Service\DateDisplayService
+    arguments: ['@config.factory']
