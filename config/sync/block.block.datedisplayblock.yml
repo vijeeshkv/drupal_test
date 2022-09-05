@@ -1,0 +1,20 @@
+uuid: 0b33b4ab-630a-495d-b098-308fafd68c49
+langcode: en
+status: true
+dependencies:
+  module:
+    - administration
+  theme:
+    - bootstrap_barrio_subtheme
+id: datedisplayblock
+theme: bootstrap_barrio_subtheme
+region: top_header
+weight: 0
+provider: null
+plugin: date_display_block
+settings:
+  id: date_display_block
+  label: 'Date Display Block'
+  label_display: '0'
+  provider: administration
+visibility: {  }
