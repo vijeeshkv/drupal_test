@@ -40,9 +40,7 @@ class DateDisplayService {
 
     $config = $this->configFactory->get(static::SETTINGS);
     $date_timezone = $config->get('admin_timezone');
-    $today = 'Y-m-d H:i:s';
-    $date = new DateTime($today, new DateTimeZone($date_timezone));
-    $today = $date->format('Y-m-d H:i:s') . "\n";
+    $today = 'jS M Y h:i:s A';
     return (string) $today;
   }
 
