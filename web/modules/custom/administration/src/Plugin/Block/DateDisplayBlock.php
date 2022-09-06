@@ -21,9 +21,11 @@ class DateDisplayBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $markup  = '<b>Current Date and Time</b> ';
-    $today = date('Y-m-d H:i:s');
-    $markup .= $today;
+    $timezone = 'America/Chicago';
+    $langcode = NULL;
+    $formatted = \Drupal::service('date.formatter')->format(time(), 'custom', 'jS M Y h:i:s A', $timezone, $langcode);
+    $markup = '<b>Current Date and Time</b> ';
+    $markup .= $formatted;
     return [
       '#markup' => $markup,
     ];

@@ -3,9 +3,11 @@
 namespace Drupal\administration\Service;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
+use DateTime;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
- * DateDisplayService - Service for operation on Custom Date Display.
+ * DateDisplayService - Service for the Custom Date Display.
  */
 class DateDisplayService {
 
@@ -37,10 +39,11 @@ class DateDisplayService {
   public function getValue() {
 
     $config = $this->configFactory->get(static::SETTINGS);
-    $date = $config->get('admin_timezone');
-    $today = date('Y-m-d H:i:s', mktime(0, 0, 0));
-    $today = new DateTime($today);
-    return (string) $date;
+    $date_timezone = $config->get('admin_timezone');
+    $today = 'Y-m-d H:i:s';
+    $date = new DateTime($today, new DateTimeZone($date_timezone));
+    $today = $date->format('Y-m-d H:i:s') . "\n";
+    return (string) $today;
   }
 
 }

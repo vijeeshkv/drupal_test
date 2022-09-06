@@ -8,8 +8,8 @@ dependencies:
     - bootstrap_barrio_subtheme
 id: datedisplayblock
 theme: bootstrap_barrio_subtheme
-region: top_header
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: date_display_block
 settings:
