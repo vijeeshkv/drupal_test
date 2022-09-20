@@ -40,7 +40,7 @@ class DateDisplayService {
     $config = $this->configFactory->get(static::SETTINGS);
     $timezone = $config->get('admin_timezone');
     $langcode = NULL;
-    $formatted = \Drupal::service('date.formatter')->format(time(), 'custom', 'jS M Y h:i:s A', $timezone, $langcode);
+    $formatted = \Drupal::service('date.formatter')->format(time(), 'custom', 'jS M Y - h:i:s A', $timezone, $langcode);
     $markup = 'Service Current Date and Time: ';
     $markup .= $formatted;
     return (string) $markup;

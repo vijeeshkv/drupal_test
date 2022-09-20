@@ -98,7 +98,7 @@ class DateDisplayBlock extends BlockBase implements ContainerFactoryPluginInterf
     try {
       $timezone = $this->dateDisplayService->getConfigTimeZone();
       $langcode = NULL;
-      $formatted = \Drupal::service('date.formatter')->format(time(), 'custom', 'jS M Y h:i:s A', $timezone, $langcode);
+      $formatted = \Drupal::service('date.formatter')->format(time(), 'custom', 'jS M Y - h:i:s A', $timezone, $langcode);
       $markup = 'Block Current Date and Time: ';
       $markup .= $formatted;
       $service_data = $this->dateDisplayService->getValue();
