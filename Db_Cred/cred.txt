@@ -1,0 +1,8 @@
+http://drupal-assigntest.dd:9095/user/login
+
+user name: admin
+password: admin123
+
+Form Configuration URL
+http://drupal-assigntest.dd:9095/admin/config/administration/settings
+

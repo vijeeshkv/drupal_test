@@ -106,3 +106,5 @@ web/sites/example.settings.local.php
 /.gitattributes
 /.drush-lock-update
 web/sites/drupal-assigntest.dd/
+
+!Db_Cred/db-drupal-assign-test.zip
