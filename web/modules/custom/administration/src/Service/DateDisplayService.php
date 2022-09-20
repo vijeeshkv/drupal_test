@@ -37,11 +37,25 @@ class DateDisplayService {
    *   The current date converted with custom timezone configuration and return as a string.
    */
   public function getValue() {
-
     $config = $this->configFactory->get(static::SETTINGS);
-    $date_timezone = $config->get('admin_timezone');
-    $today = 'jS M Y h:i:s A';
-    return (string) $today;
+    $timezone = $config->get('admin_timezone');
+    $langcode = NULL;
+    $formatted = \Drupal::service('date.formatter')->format(time(), 'custom', 'jS M Y h:i:s A', $timezone, $langcode);
+    $markup = 'Service Current Date and Time: ';
+    $markup .= $formatted;
+    return (string) $markup;
+  }
+
+  /**
+   * Gets the custom date value.
+   *
+   * @return string
+   *   The current date converted with custom timezone configuration and return as a string.
+   */
+  public function getConfigTimeZone() {
+    $config = $this->configFactory->get(static::SETTINGS);
+    $timezone = $config->get('admin_timezone');    
+    return (string) $timezone;
   }
 
 }

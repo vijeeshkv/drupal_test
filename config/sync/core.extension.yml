@@ -46,6 +46,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hello_world: 0
   help: 0
   history: 0
   image: 0
@@ -93,4 +94,6 @@ theme:
   claro: 0
   bootstrap_barrio: 0
   bootstrap_barrio_subtheme: 0
+  stable: 0
+  vani: 0
 profile: standard

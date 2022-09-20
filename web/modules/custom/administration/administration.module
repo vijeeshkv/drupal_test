@@ -7,14 +7,9 @@
 
 
 use Drupal\Core\Url;
-use Drupal\user\UserInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Cache\Cache;
-use Drupal\node\Entity\Node;
-use Drupal\Core\Database\Database;
 use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -31,4 +26,20 @@ function administration_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function administration_theme() {
+  return [
+    'date_display_service_block' => [
+      'variables' => [
+        'block_data' => NULL,
+        'service_data' => NULL,
+        'time_zone' => NULL
+      ],
+      'template' => 'block--date-display-service',
+    ],
+  ];
 }

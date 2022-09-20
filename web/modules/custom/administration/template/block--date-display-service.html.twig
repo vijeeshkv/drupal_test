@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Date Display Service custom block.
+ */
+#}
+<div>
+    {% if block_data is not empty %}
+        <h2>{{ block_data }}</h2>        
+    {% endif %}
+</div>
+<div>
+    {% if service_data is not empty %}
+        <h2>{{ service_data }}</h2>        
+    {% endif %}
+</div>
